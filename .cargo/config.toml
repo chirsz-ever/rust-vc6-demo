@@ -1,0 +1,5 @@
+[target.i686-pc-windows-msvc]
+rustflags = [
+    "-C", "linker=dist\\link_wrapper.exe",
+    "-C", "strip=debuginfo",
+]
