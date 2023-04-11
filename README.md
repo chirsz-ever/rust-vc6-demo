@@ -11,4 +11,4 @@
 
 [src/main.rs](src/main.rs) 来自 [TRPL 第二章](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html).
 
-[3rdparty/YY_Thunks_for_WinXP.obj](3rdparty/YY_Thunks_for_WinXP.obj) 来自 [YY-Truncks v1.0.6](https://github.com/Chuyu-Team/YY-Thunks/releases/tag/v1.0.6)
+[3rdparty/YY_Thunks_for_WinXP.obj](3rdparty/YY_Thunks_for_WinXP.obj) 来自 [YY-Truncks v1.0.7-Beta4](https://github.com/Chuyu-Team/YY-Thunks/releases/tag/v1.0.7-Beta4)
