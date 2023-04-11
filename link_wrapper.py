@@ -3,7 +3,7 @@
 import sys
 import subprocess
 
-unused_libs = ["userenv.lib", "legacy_stdio_definitions.lib", "bcrypt.lib"]
+unused_libs = ["legacy_stdio_definitions.lib", "bcrypt.lib"]
 
 args = []
 for x in sys.argv:
