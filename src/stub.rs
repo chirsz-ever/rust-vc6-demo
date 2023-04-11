@@ -27,11 +27,7 @@ pub extern "stdcall" fn SHSetFolderPathW(_0: c_int, _1: HANDLE, _2: DWORD, _3: L
     0
 }
 
-extern "cdecl" {
-    fn abort();
-}
-
 #[no_mangle]
 pub unsafe extern "cdecl" fn __CxxFrameHandler3() {
-    abort();
+    std::process::exit(1);
 }
