@@ -22,8 +22,8 @@ for x in sys.argv:
 args[0] = "LINK.EXE"
 
 r = subprocess.run(args, capture_output=True)
-print(r.stdout.decode(errors='replace').replace('\uFFFD', '?'))
-print(r.stderr.decode(errors='replace').replace('\uFFFD', '?'), file=sys.stderr)
+sys.stdout.buffer.write(r.stdout)
+sys.stderr.buffer.write(r.stderr)
 sys.exit(r.returncode)
 
 # sys.exit(subprocess.run(args, encoding="raw_unicode_escape").returncode)
