@@ -5,7 +5,10 @@
 //     pub fn SHSetFolderPathW(_0: c_int, _1: HANDLE, _2: DWORD, _3: LPCWSTR) -> HRESULT;
 // }
 
-#[no_mangle]
-unsafe extern "cdecl" fn __CxxFrameHandler3() {
-    std::process::exit(1);
-}
+#[cfg(all(target_env = "msvc", target_arch = "x86"))]
+std::arch::global_asm!(
+    ".extern ___CxxFrameHandler",
+    ".global ___CxxFrameHandler3",
+    "___CxxFrameHandler3:",
+    "jmp ___CxxFrameHandler",
+);
