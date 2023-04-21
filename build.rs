@@ -12,8 +12,17 @@ fn main() {
             .arg(format!("/OUT:{out_dir}\\shell32_stub.lib"))
             .status()
             .unwrap();
+
+        let link_wrapper_src = "link_wrapper\\link_wrapper.rs";
+        let link_wrapper_exe = "link_wrapper\\link_wrapper.exe";
+        Command::new("rustc")
+            .args([link_wrapper_src, "-o", link_wrapper_exe])
+            .status()
+            .unwrap();
+
         println!("cargo:rustc-link-lib=shell32_stub");
         println!("cargo:rustc-link-search={out_dir}");
         println!("cargo:rerun-if-changed={def_file}");
+        println!("cargo:rerun-if-changed={link_wrapper_src}");
     }
 }

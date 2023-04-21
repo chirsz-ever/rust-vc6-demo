@@ -1,5 +1,5 @@
 [target.i686-pc-windows-msvc]
-linker = "dist\\link_wrapper.exe"
+linker = "link_wrapper\\link_wrapper.exe"
 rustflags = [
     "-C", "link-args=oldnames.lib 3rdparty\\YY_Thunks_for_WinXP.obj",
     "-C", "strip=debuginfo",
