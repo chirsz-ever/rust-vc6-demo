@@ -1,0 +1,6 @@
+LIBRARY ntdll.dll
+EXPORTS
+    RtlNtStatusToDosError
+    NtCreateFile
+    NtReadFile
+    NtWriteFile

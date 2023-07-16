@@ -13,7 +13,6 @@ fn main() -> std::process::ExitCode {
     let args_map = BTreeMap::from([
         ("legacy_stdio_definitions.lib", None),
         ("bcrypt.lib", None),
-        ("ntdll.lib", None),
     ]);
     let mut new_args = Vec::new();
     for arg in std::env::args() {
